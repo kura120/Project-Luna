@@ -742,7 +742,7 @@ function Material.Load(Config)
 	MainFrame.Size = UDim2.fromOffset(0,SizeY)
 	MainFrame.Position = UDim2.fromScale(0.5,0.5) - UDim2.fromOffset(SizeX/2,SizeY/2)
 	MainFrame.ImageColor3 = Theme.MainFrame
-	MainFrame.Parent = NewInstance
+	MainFrame.Parent = getgenv().OldInstance
 
 	TweenService:Create(MainFrame, TweenInfo.new(1), {Size = UDim2.fromOffset(SizeX,SizeY)}):Play()
 
